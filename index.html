@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- JQuery Stuff -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                // .hide Function
+                $("#hide").click(function(){
+                    $("#hide-p").hide();
+                })
+
+                // .show Function
+                $("#hidden-message").hide();
+                $("#show").click(function(){
+                    $("#hidden-message").show();
+                })
+
+                // .toggle Function
+                $("#toggle").click(function(){
+                    $("#peek-a-boo").toggle();
+                })
+
+                // .slideDown Function
+                $("#hello").hide();
+                $("#slide-down").click(function(){
+                    $("#hello").slideDown();
+                })
+
+                // .slideUp Function
+                $("#slide-up").click(function(){
+                    $("#goodbye").slideUp();
+                })
+
+                // .slideToggle Function
+                $("#slide-toggle").click(function(){
+                    $("#hello-goodbye").slideToggle();
+                })
+
+                // .fadeIn Function
+                $("#out-of-mist").hide();
+                $("#fade-in").click(function(){
+                    $("#out-of-mist").fadeIn();
+                })
+
+                // .fadeOut Function
+                $("#fade-out").click(function(){
+                    $("#into-the-mist").fadeOut();
+                })
+
+                // .addClass Function
+                $("#add-class1").click(function(){
+                    $("#add-classes-to").addClass("class1")
+                })
+                $("#add-class2").click(function(){
+                    $("#add-classes-to").addClass("class2")
+                })
+
+                // .before Function
+                $("#before-1").click(function(){
+                    $("#before-first").before("Before First")
+                })
+                $("#before-2").click(function(){
+                    $("#before-second").before("Before Second")
+                })
+                $("#before-both").click(function(){
+                    $("#before-first").before("Before Both")
+                    $("#before-second").before("Before Both")
+                })
+
+                // .after Function
+                $("#after-1").click(function(){
+                    $("#after-first").after("After First")
+                })
+                $("#after-2").click(function(){
+                    $("#after-second").after("After Second")
+                })
+                $("#after-both").click(function(){
+                    $("#after-first").after("After Both")
+                    $("#after-second").after("After Both")
+                })
+
+                // .append Function
+                $("#append").click(function(){
+                    $("#more-and-more").append(" and more")
+                })
+
+                // .html Function
+                $("#html").click(function(){
+                    var htmlString = $("div#1-element").html();
+                    $("#html-is").text(htmlString)
+                })
+
+                // .attr Function
+                $("#attr").click(function(){
+                    var attribute = $("#paragraph-id").attr("id");
+                    $("#target").text(attribute)
+                })
+
+                // .val Function
+                $("#val").click(function(){
+                    var valueText = $("#text-input").val();
+                    $("#text-target").text(valueText)
+                    var valueDate = $("#date-input").val();
+                    $("#date-target").text(valueDate)
+                })
+
+                // .data Function
+                $("#data").click(function(){
+                    $("#data-div").data("the-data", {first: 16, second: "pizza"})
+                    $("#data-1").text($("#data-div").data("the-data").first)
+                    $("#data-2").text($("#data-div").data("the-data").second)
+                })
+            });
+        </script>
+        <!-- End JQuery Stuff -->
+        <title>JQuery Functions</title>
+    </head>
+    <body>
+        <div>
+            <h2>.hide</h2>
+            <button id="hide">hide</button>
+            <p id="hide-p">Click the button to make this paragraph go away</p>
+        </div>
+        <br>
+        <div>
+            <h2>.show</h2>
+            <button id="show">show</button>
+            <p>Click to show a hidden message</p>
+            <p id="hidden-message">Ah, you found me!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.toggle</h2>
+            <button id="toggle">toggle</button>
+            <p>Click to toggle on/off the visiablity of an object</p>
+            <p id="peek-a-boo">Peek-a-boo</p>
+        </div>
+        <br>
+        <div>
+            <h2>.slideDown</h2>
+            <button id="slide-down">slide down</button>
+            <p>Click to display the matched element with a slide down motion</p>
+            <p id="hello">Hello</p>
+        </div>
+        <br>
+        <div>
+            <h2>.slideUp</h2>
+            <button id="slide-up">slide up</button>
+            <p>Click to hide the matched element with a slide up motion</p>
+            <p id="goodbye">Goodbye!!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.slideToggle</h2>
+            <button id="slide-toggle">slide toggle</button>
+            <p>Click to display or hide the matched element with a sliding motion</p>
+            <p id="hello-goodbye">Hello! Goodbye!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.fadeIn</h2>
+            <button id="fade-in">fade in</button>
+            <p>Click to display the matched element by fading it in</p>
+            <p id="out-of-mist">Out of the mist!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.fadeOut</h2>
+            <button id="fade-out">fade out</button>
+            <p>Click to hide the matched element by fading it out</p>
+            <p id="into-the-mist">Into the mist!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.addClass</h2>
+            <button id="add-class1">add class: class1</button>
+            <button id="add-class2">add class: class2</button>
+            <p>Click to add a specified class/classes to the element</p>
+            <p id="add-classes-to">Add classes to me!</p>
+        </div>
+        <br>
+        <div>
+            <h2>.before</h2>
+            <button id="before-1">before first</button>
+            <button id="before-2">before second</button>
+            <button id="before-both">before both</button>
+            <p>Click to insert content specified before each element</p>
+            <p id="before-first">First element</p>
+            <p id="before-second">Second element</p>
+        </div>
+        <br>
+        <div>
+            <h2>.after</h2>
+            <button id="after-1">after first</button>
+            <button id="after-2">after second</button>
+            <button id="after-both">after both</button>
+            <p>Click to insert content specified after each element</p>
+            <p id="after-first">First element</p>
+            <p id="after-second">Second element</p>
+        </div>
+        <br>
+        <div>
+            <h2>.append</h2>
+            <button id="append">append</button>
+            <p>Click to insert content specified to the end of the element</p>
+            <p id="more-and-more">So you can add more</p>
+        </div>
+        <br>
+        <div>
+            <h2>.html</h2>
+            <button id="html">html</button>
+            <p>Click to get html content of the first element in the set of matched elements</p>
+            <div id="1-element">
+                <p id="first">First element</p>
+            </div>
+            <h4>The HTML content from clicking the button is:</h4>
+            <h4 id="html-is"></h4>
+        </div>
+        <br>
+        <div>
+            <h2>.attr</h2>
+            <button id="attr">attr</button>
+            <p>Click to get the value of the attribute for the first element in the set of matched elements</p>
+            <p id="paragraph-id">The id of this paragraph will appear below when button is pressed:</p>
+            <p id="target"></p>
+        </div>
+        <br>
+        <div>
+            <h2>.val</h2>
+            <button id="val">val</button>
+            <p>Click to get the current value of the elements</p>
+            <input type="text" id="text-input"></input><br>
+            <div id="text-target"></div><br>
+            <input type="date" id="date-input"></input><br>
+            <div id="date-target"></div><br>
+        </div>
+        <br>
+        <div>
+            <h2>.data</h2>
+            <button id="data">data</button>
+            <p>Click to retrieve the values stored</p>
+            <div id="data-div">
+                The values stored were
+                <span id="data-1">(First Value)</span>
+                and
+                <span id="data-2">(Second Value)</span>
+            </div>
+        </div>
+        <br>
+    </body>
+</html>
